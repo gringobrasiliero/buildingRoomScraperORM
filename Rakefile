@@ -9,9 +9,7 @@ task :console do
   end
 
   task :scrape_rooms do
-    atl_scraper = RoomScraper.new(https://atlanta.craigslist.org/search/roo)
-    atl_scraper.call
+    atl_scraper = RoomScraper.new("https://atlanta.craigslist.org/search/roo")
+  #  atl_scraper.call
 
       end
-
-      
