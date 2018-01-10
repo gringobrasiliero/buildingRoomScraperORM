@@ -13,7 +13,7 @@ class RoomScraper
 
   private
   def rows
-    @rows ||= @doc.search("div.content span.rows p.row")
+    @rows ||= @doc.search("div.content li.result-row")
   end
 
   def scrape_row(row)
