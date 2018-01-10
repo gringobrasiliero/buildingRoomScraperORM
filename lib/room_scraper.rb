@@ -1,15 +1,14 @@
 class RoomScraper
 
   def initialize(index_url)
+    @index_url = index_url
     @doc = Nokogiri::HTML(open(index_url))
     #binding.pry
   end
 
   def call
     rows.each do |row_doc|
-    room = Room.create_from_hash(scrape_row(row_doc))
-    room.save
-
+    Room.create_from_hash(scrape_row(row_doc))
     end
   end
 
